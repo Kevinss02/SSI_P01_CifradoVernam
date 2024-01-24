@@ -1,0 +1,55 @@
+{
+  "name": "ssi_p01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "pnpm run build && node dist/index.js",
+    "build": "pnpm i && tsc",
+    "dev": "tsc-watch --onSuccess \"node dist/index.js\"",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint --fix .",
+    "format": "pnpm exec prettier . --write",
+    "prepare": "husky install",
+    "test": "",
+    "knip": "knip",
+    "cz": "npx cz"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@types/node": "^20.10.0",
+    "@types/readline-sync": "^1.4.8",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "dotenv": "^16.3.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-config-standard-with-typescript": "^39.1.1",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-n": "^16.4.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "express-serve-static-core": "^0.1.1",
+    "husky": "^8.0.3",
+    "knip": "^2.43.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "tsc-watch": "^6.0.4",
+    "typescript": "^5.3.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
